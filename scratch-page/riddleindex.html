@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riddle Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+        h1 {
+            color: #333;
+        }
+        #riddle {
+            margin: 20px 0;
+            font-size: 24px;
+            color: #555;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Riddle Generator</h1>
+        <div id="riddle">Click the button to see a riddle!</div>
+        <button onclick="generateRiddle()">Get a Riddle</button>
+    </div>
+
+    <script>
+        // Array of riddles
+        const riddles = [
+            { question: "What has keys but can't open locks?", answer: "A piano" },
+            { question: "What comes once in a minute, twice in a moment, but never in a thousand years?", answer: "The letter 'M'" },
+            { question: "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?", answer: "An echo" },
+            { question: "The more of this there is, the less you see. What is it?", answer: "Darkness" },
+            { question: "I can be cracked, made, told, and played. What am I?", answer: "A joke" }
+        ];
+
+        // Function to generate a random riddle
+        function generateRiddle() {
+            const randomIndex = Math.floor(Math.random() * riddles.length);
+            const selectedRiddle = riddles[randomIndex];
+            document.getElementById('riddle').innerHTML = `<strong>Riddle:</strong> ${selectedRiddle.question} <br><em>Answer: </em> ${selectedRiddle.answer}`;
+        }
+    </script>
+
+</body>
+</html>

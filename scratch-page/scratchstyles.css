@@ -1,0 +1,43 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: aqua ;
+    margin: 0;
+    padding: 0;
+    background-color: #000f71; /* Light gray background */
+    color: #ffffff; /* Dark text color */
+    text-align: center; /* Center-align text globally */
+}
+
+/* Header Styling */
+header {
+    background-color: #007BFF; /* Bright blue background */
+    color: #ffffff; /* White text */
+    padding: 40px 20px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Main Content Area */
+main {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto; /* Center the content */
+}
+
+/* Section Styling */
+section {
+    background-color: #00115a; /* White background for sections */
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #007BFF; /* Matching footer with header color */
+    color: #030165;
+    padding: 15px;
+    font-size: 0.9rem;
+}
